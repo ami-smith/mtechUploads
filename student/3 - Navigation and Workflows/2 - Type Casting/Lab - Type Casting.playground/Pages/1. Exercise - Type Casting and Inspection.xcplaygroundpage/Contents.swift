@@ -29,24 +29,37 @@ print(myDictionary)
 
 //:  Create a variable `total` of type `Double` set to 0. Then loop through the dictionary, and add the value of each integer and double to your variable's value. For each string value, add 1 to the total. For each boolean, add 2 to the total if the boolean is `true`, or subtract 3 if it's `false`. Print the value of `total`.
 var total: Double = 0
-for index in myDictionary {
-    if let doubleVar = index as? Int || Double {
-        
-        return nil
 
-    print(doubleVar * 2)
+for index in myDictionary.values {
     
-
-if let bool == true {
-    return total += 2
-} else if let bool == false {
-    return total -= 3
+    if let _ = index as? String {
+        total += 1
+    
+    } else if let bool = index as? Bool {
+    if bool {
+    total += 2
+} else {
+    total -= 3
 }
-print(total)
+    }
+}
 //:  Create a variable `total2` of type `Double` set to 0. Loop through the collection again, adding up all the integers and doubles. For each string that you come across during the loop, attempt to convert the string into a number, and add that value to the total. Ignore booleans. Print the total.
-        var total2: Double = 0
-        
+var total2: Double = 0
 
+
+for randomValue in random {
+    if let myIntValue = randomValue as? Int {
+        total2 += Double(myIntValue)
+    }
+    else if let myDoubleValue = randomValue as? Double {
+        total2 += myDoubleValue
+} else if let myStringValue = randomValue as? String, let myStringTurnedIntoDoubleValue = Double(myStringValue) {
+    total2 += myStringTurnedIntoDoubleValue
+//you could also write this -> else if let myStringValue = randomValue as? String, let myStringTurnedIntoDoubleValue = Double(myStringValue) as another if let statement. You can use a comma instead of an if let statement
+//
+}
+}
+print(total2)
 /*:
 page 1 of 2  |  [Next: App Exercise - Workout Types](@next)
  */

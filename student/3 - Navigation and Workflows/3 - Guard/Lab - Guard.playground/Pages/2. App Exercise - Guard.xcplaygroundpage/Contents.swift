@@ -16,7 +16,7 @@ struct Workout {
     
     init?(start: Double, end: Double) {
        
-        guard start > 10, end < 10 else {
+        guard end - start < 10 else {
             return nil
         }
         self.startTime = start
