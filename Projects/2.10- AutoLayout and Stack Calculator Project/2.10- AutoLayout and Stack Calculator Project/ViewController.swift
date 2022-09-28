@@ -12,6 +12,8 @@ enum Operation {
     case multiply
     case add
     case subtract
+    case negative
+    case percentage
 }
 
 class ViewController: UIViewController {
@@ -31,12 +33,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-    
     
     @IBAction func clearButtonPressed(_ sender: UIButton) {
-//        if this is pressed, the label needs to reset to 0
-        
     }
     
     @IBAction func posOrNegButtonPressed(_ sender: UIButton) {
@@ -59,10 +57,8 @@ class ViewController: UIViewController {
     
     @IBAction func decimalButtonPressed(_ sender: UIButton) {
     }
+    
     @IBAction func equalButtonPressed(_ sender: UIButton) {
-        // Something like this, but not this
-        //        let intValue = Int(calculatedLabel.text)
-        
     }
     
     
@@ -83,6 +79,7 @@ class ViewController: UIViewController {
         switch button.titleLabel?.text {
         case "Clear":
             calculatedLabel.text = "0"
+            
         case "+":
             previousNumberPressed = calculatedLabel.text!
             operand = .add
@@ -96,7 +93,19 @@ class ViewController: UIViewController {
         case "x": previousNumberPressed = calculatedLabel.text!
             operand = .multiply
             calculatedLabel.text = "0"
+        case "%":
+            if let number = Double(calculatedLabel.text!) {
+                let percentage = "\(number / 100)"
+                calculatedLabel.text = percentage
+            }
+        case "+/-":
+            previousNumberPressed = calculatedLabel.text!
+            operand = .negative
+            calculatedLabel.text = "0"
+        
+            
         case "=":
+            
             switch operand {
                 
             case .add:
@@ -119,14 +128,21 @@ class ViewController: UIViewController {
                 let product = firstNum * secondNum
                 calculatedLabel.text = String(product)
                     }
+            case .negative:
+                if let firstNum = Double(previousNumberPressed), let _ = Double(calculatedLabel.text!) {
+                    let negative = firstNum * -1
+                    calculatedLabel.text = String(negative)
+                }
+            case .percentage:
+                print("not done")
             case .none:
                 print("error")
             }
-            
-        default: print("error")
+            default: print("error")
         }
     
 
     }
     
 }
+
