@@ -24,9 +24,6 @@ class ViewController: UIViewController {
     
     
     @IBOutlet var calculatedLabel: UILabel!
-    //Remember the type of operation clicked
-//    var operationClicked: Operation?
-    //track the second button clicked
     
     var numbers = ""
     
@@ -99,9 +96,7 @@ class ViewController: UIViewController {
                 calculatedLabel.text = percentage
             }
         case "+/-":
-            previousNumberPressed = calculatedLabel.text!
-            operand = .negative
-            calculatedLabel.text = "0"
+            calculatedLabel.text = "\(Double ((calculatedLabel.text)!)! * -1)"
         
             
         case "=":
