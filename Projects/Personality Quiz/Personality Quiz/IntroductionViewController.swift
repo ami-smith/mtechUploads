@@ -14,6 +14,8 @@ class IntroductionViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func startQuizPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "startQuiz", sender: nil)
+    }
+    
 }
-

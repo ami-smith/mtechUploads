@@ -1,14 +1,13 @@
 //
 //  AppDelegate.swift
-//  Personality Quiz
+//  Tech Social Media App
 //
-//  Created by Ami Smith on 10/3/22.
+//  Created by Ami Smith on 10/5/22.
 //
 
 import UIKit
 
 @main
-
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 

@@ -7,72 +7,66 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		841CDB9A28EB843000F0C138 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CDB9928EB843000F0C138 /* AppDelegate.swift */; };
-		841CDB9C28EB843000F0C138 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CDB9B28EB843000F0C138 /* SceneDelegate.swift */; };
-		841CDB9E28EB843000F0C138 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CDB9D28EB843000F0C138 /* IntroductionViewController.swift */; };
-		841CDBA128EB843000F0C138 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841CDB9F28EB843000F0C138 /* Main.storyboard */; };
-		841CDBA328EB843100F0C138 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 841CDBA228EB843100F0C138 /* Assets.xcassets */; };
-		841CDBA628EB843100F0C138 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841CDBA428EB843100F0C138 /* LaunchScreen.storyboard */; };
-		841CDBB128EB843100F0C138 /* Personality_QuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CDBB028EB843100F0C138 /* Personality_QuizTests.swift */; };
-		841CDBBB28EB843100F0C138 /* Personality_QuizUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CDBBA28EB843100F0C138 /* Personality_QuizUITests.swift */; };
-		841CDBBD28EB843100F0C138 /* Personality_QuizUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CDBBC28EB843100F0C138 /* Personality_QuizUITestsLaunchTests.swift */; };
-		841CDBCA28EBC72F00F0C138 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CDBC928EBC72F00F0C138 /* QuestionViewController.swift */; };
-		841CDBCC28EBC75B00F0C138 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CDBCB28EBC75A00F0C138 /* ResultsViewController.swift */; };
-		848DA0F628ECDCAD009F38A3 /* QuestionsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DA0F528ECDCAD009F38A3 /* QuestionsData.swift */; };
+		848DA10428EDC7AF009F38A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DA10328EDC7AF009F38A3 /* AppDelegate.swift */; };
+		848DA10628EDC7AF009F38A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DA10528EDC7AF009F38A3 /* SceneDelegate.swift */; };
+		848DA10828EDC7AF009F38A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DA10728EDC7AF009F38A3 /* ViewController.swift */; };
+		848DA10B28EDC7AF009F38A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848DA10928EDC7AF009F38A3 /* Main.storyboard */; };
+		848DA10D28EDC7B1009F38A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 848DA10C28EDC7B1009F38A3 /* Assets.xcassets */; };
+		848DA11028EDC7B1009F38A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848DA10E28EDC7B1009F38A3 /* LaunchScreen.storyboard */; };
+		848DA11B28EDC7B1009F38A3 /* Tech_Social_Media_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DA11A28EDC7B1009F38A3 /* Tech_Social_Media_AppTests.swift */; };
+		848DA12528EDC7B1009F38A3 /* Tech_Social_Media_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DA12428EDC7B1009F38A3 /* Tech_Social_Media_AppUITests.swift */; };
+		848DA12728EDC7B1009F38A3 /* Tech_Social_Media_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DA12628EDC7B1009F38A3 /* Tech_Social_Media_AppUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		841CDBAD28EB843100F0C138 /* PBXContainerItemProxy */ = {
+		848DA11728EDC7B1009F38A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 841CDB8E28EB843000F0C138 /* Project object */;
+			containerPortal = 848DA0F828EDC7AF009F38A3 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 841CDB9528EB843000F0C138;
-			remoteInfo = "Personality Quiz";
+			remoteGlobalIDString = 848DA0FF28EDC7AF009F38A3;
+			remoteInfo = "Tech Social Media App";
 		};
-		841CDBB728EB843100F0C138 /* PBXContainerItemProxy */ = {
+		848DA12128EDC7B1009F38A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 841CDB8E28EB843000F0C138 /* Project object */;
+			containerPortal = 848DA0F828EDC7AF009F38A3 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 841CDB9528EB843000F0C138;
-			remoteInfo = "Personality Quiz";
+			remoteGlobalIDString = 848DA0FF28EDC7AF009F38A3;
+			remoteInfo = "Tech Social Media App";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		841CDB9628EB843000F0C138 /* Personality Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Personality Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		841CDB9928EB843000F0C138 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		841CDB9B28EB843000F0C138 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		841CDB9D28EB843000F0C138 /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
-		841CDBA028EB843000F0C138 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		841CDBA228EB843100F0C138 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		841CDBA528EB843100F0C138 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		841CDBA728EB843100F0C138 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		841CDBAC28EB843100F0C138 /* Personality QuizTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Personality QuizTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		841CDBB028EB843100F0C138 /* Personality_QuizTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personality_QuizTests.swift; sourceTree = "<group>"; };
-		841CDBB628EB843100F0C138 /* Personality QuizUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Personality QuizUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		841CDBBA28EB843100F0C138 /* Personality_QuizUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personality_QuizUITests.swift; sourceTree = "<group>"; };
-		841CDBBC28EB843100F0C138 /* Personality_QuizUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personality_QuizUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		841CDBC928EBC72F00F0C138 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
-		841CDBCB28EBC75A00F0C138 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
-		848DA0F528ECDCAD009F38A3 /* QuestionsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsData.swift; sourceTree = "<group>"; };
+		848DA10028EDC7AF009F38A3 /* Tech Social Media App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tech Social Media App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		848DA10328EDC7AF009F38A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		848DA10528EDC7AF009F38A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		848DA10728EDC7AF009F38A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		848DA10A28EDC7AF009F38A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		848DA10C28EDC7B1009F38A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		848DA10F28EDC7B1009F38A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		848DA11128EDC7B1009F38A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		848DA11628EDC7B1009F38A3 /* Tech Social Media AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tech Social Media AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		848DA11A28EDC7B1009F38A3 /* Tech_Social_Media_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tech_Social_Media_AppTests.swift; sourceTree = "<group>"; };
+		848DA12028EDC7B1009F38A3 /* Tech Social Media AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tech Social Media AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		848DA12428EDC7B1009F38A3 /* Tech_Social_Media_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tech_Social_Media_AppUITests.swift; sourceTree = "<group>"; };
+		848DA12628EDC7B1009F38A3 /* Tech_Social_Media_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tech_Social_Media_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		841CDB9328EB843000F0C138 /* Frameworks */ = {
+		848DA0FD28EDC7AF009F38A3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		841CDBA928EB843100F0C138 /* Frameworks */ = {
+		848DA11328EDC7B1009F38A3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		841CDBB328EB843100F0C138 /* Frameworks */ = {
+		848DA11D28EDC7B1009F38A3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -82,140 +76,137 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		841CDB8D28EB843000F0C138 = {
+		848DA0F728EDC7AF009F38A3 = {
 			isa = PBXGroup;
 			children = (
-				841CDB9828EB843000F0C138 /* Personality Quiz */,
-				841CDBAF28EB843100F0C138 /* Personality QuizTests */,
-				841CDBB928EB843100F0C138 /* Personality QuizUITests */,
-				841CDB9728EB843000F0C138 /* Products */,
+				848DA10228EDC7AF009F38A3 /* Tech Social Media App */,
+				848DA11928EDC7B1009F38A3 /* Tech Social Media AppTests */,
+				848DA12328EDC7B1009F38A3 /* Tech Social Media AppUITests */,
+				848DA10128EDC7AF009F38A3 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		841CDB9728EB843000F0C138 /* Products */ = {
+		848DA10128EDC7AF009F38A3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				841CDB9628EB843000F0C138 /* Personality Quiz.app */,
-				841CDBAC28EB843100F0C138 /* Personality QuizTests.xctest */,
-				841CDBB628EB843100F0C138 /* Personality QuizUITests.xctest */,
+				848DA10028EDC7AF009F38A3 /* Tech Social Media App.app */,
+				848DA11628EDC7B1009F38A3 /* Tech Social Media AppTests.xctest */,
+				848DA12028EDC7B1009F38A3 /* Tech Social Media AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		841CDB9828EB843000F0C138 /* Personality Quiz */ = {
+		848DA10228EDC7AF009F38A3 /* Tech Social Media App */ = {
 			isa = PBXGroup;
 			children = (
-				841CDB9928EB843000F0C138 /* AppDelegate.swift */,
-				841CDB9B28EB843000F0C138 /* SceneDelegate.swift */,
-				841CDB9F28EB843000F0C138 /* Main.storyboard */,
-				841CDB9D28EB843000F0C138 /* IntroductionViewController.swift */,
-				841CDBC928EBC72F00F0C138 /* QuestionViewController.swift */,
-				841CDBCB28EBC75A00F0C138 /* ResultsViewController.swift */,
-				848DA0F528ECDCAD009F38A3 /* QuestionsData.swift */,
-				841CDBA228EB843100F0C138 /* Assets.xcassets */,
-				841CDBA428EB843100F0C138 /* LaunchScreen.storyboard */,
-				841CDBA728EB843100F0C138 /* Info.plist */,
+				848DA10328EDC7AF009F38A3 /* AppDelegate.swift */,
+				848DA10528EDC7AF009F38A3 /* SceneDelegate.swift */,
+				848DA10728EDC7AF009F38A3 /* ViewController.swift */,
+				848DA10928EDC7AF009F38A3 /* Main.storyboard */,
+				848DA10C28EDC7B1009F38A3 /* Assets.xcassets */,
+				848DA10E28EDC7B1009F38A3 /* LaunchScreen.storyboard */,
+				848DA11128EDC7B1009F38A3 /* Info.plist */,
 			);
-			path = "Personality Quiz";
+			path = "Tech Social Media App";
 			sourceTree = "<group>";
 		};
-		841CDBAF28EB843100F0C138 /* Personality QuizTests */ = {
+		848DA11928EDC7B1009F38A3 /* Tech Social Media AppTests */ = {
 			isa = PBXGroup;
 			children = (
-				841CDBB028EB843100F0C138 /* Personality_QuizTests.swift */,
+				848DA11A28EDC7B1009F38A3 /* Tech_Social_Media_AppTests.swift */,
 			);
-			path = "Personality QuizTests";
+			path = "Tech Social Media AppTests";
 			sourceTree = "<group>";
 		};
-		841CDBB928EB843100F0C138 /* Personality QuizUITests */ = {
+		848DA12328EDC7B1009F38A3 /* Tech Social Media AppUITests */ = {
 			isa = PBXGroup;
 			children = (
-				841CDBBA28EB843100F0C138 /* Personality_QuizUITests.swift */,
-				841CDBBC28EB843100F0C138 /* Personality_QuizUITestsLaunchTests.swift */,
+				848DA12428EDC7B1009F38A3 /* Tech_Social_Media_AppUITests.swift */,
+				848DA12628EDC7B1009F38A3 /* Tech_Social_Media_AppUITestsLaunchTests.swift */,
 			);
-			path = "Personality QuizUITests";
+			path = "Tech Social Media AppUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		841CDB9528EB843000F0C138 /* Personality Quiz */ = {
+		848DA0FF28EDC7AF009F38A3 /* Tech Social Media App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 841CDBC028EB843100F0C138 /* Build configuration list for PBXNativeTarget "Personality Quiz" */;
+			buildConfigurationList = 848DA12A28EDC7B1009F38A3 /* Build configuration list for PBXNativeTarget "Tech Social Media App" */;
 			buildPhases = (
-				841CDB9228EB843000F0C138 /* Sources */,
-				841CDB9328EB843000F0C138 /* Frameworks */,
-				841CDB9428EB843000F0C138 /* Resources */,
+				848DA0FC28EDC7AF009F38A3 /* Sources */,
+				848DA0FD28EDC7AF009F38A3 /* Frameworks */,
+				848DA0FE28EDC7AF009F38A3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Personality Quiz";
-			productName = "Personality Quiz";
-			productReference = 841CDB9628EB843000F0C138 /* Personality Quiz.app */;
+			name = "Tech Social Media App";
+			productName = "Tech Social Media App";
+			productReference = 848DA10028EDC7AF009F38A3 /* Tech Social Media App.app */;
 			productType = "com.apple.product-type.application";
 		};
-		841CDBAB28EB843100F0C138 /* Personality QuizTests */ = {
+		848DA11528EDC7B1009F38A3 /* Tech Social Media AppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 841CDBC328EB843100F0C138 /* Build configuration list for PBXNativeTarget "Personality QuizTests" */;
+			buildConfigurationList = 848DA12D28EDC7B1009F38A3 /* Build configuration list for PBXNativeTarget "Tech Social Media AppTests" */;
 			buildPhases = (
-				841CDBA828EB843100F0C138 /* Sources */,
-				841CDBA928EB843100F0C138 /* Frameworks */,
-				841CDBAA28EB843100F0C138 /* Resources */,
+				848DA11228EDC7B1009F38A3 /* Sources */,
+				848DA11328EDC7B1009F38A3 /* Frameworks */,
+				848DA11428EDC7B1009F38A3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				841CDBAE28EB843100F0C138 /* PBXTargetDependency */,
+				848DA11828EDC7B1009F38A3 /* PBXTargetDependency */,
 			);
-			name = "Personality QuizTests";
-			productName = "Personality QuizTests";
-			productReference = 841CDBAC28EB843100F0C138 /* Personality QuizTests.xctest */;
+			name = "Tech Social Media AppTests";
+			productName = "Tech Social Media AppTests";
+			productReference = 848DA11628EDC7B1009F38A3 /* Tech Social Media AppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		841CDBB528EB843100F0C138 /* Personality QuizUITests */ = {
+		848DA11F28EDC7B1009F38A3 /* Tech Social Media AppUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 841CDBC628EB843100F0C138 /* Build configuration list for PBXNativeTarget "Personality QuizUITests" */;
+			buildConfigurationList = 848DA13028EDC7B1009F38A3 /* Build configuration list for PBXNativeTarget "Tech Social Media AppUITests" */;
 			buildPhases = (
-				841CDBB228EB843100F0C138 /* Sources */,
-				841CDBB328EB843100F0C138 /* Frameworks */,
-				841CDBB428EB843100F0C138 /* Resources */,
+				848DA11C28EDC7B1009F38A3 /* Sources */,
+				848DA11D28EDC7B1009F38A3 /* Frameworks */,
+				848DA11E28EDC7B1009F38A3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				841CDBB828EB843100F0C138 /* PBXTargetDependency */,
+				848DA12228EDC7B1009F38A3 /* PBXTargetDependency */,
 			);
-			name = "Personality QuizUITests";
-			productName = "Personality QuizUITests";
-			productReference = 841CDBB628EB843100F0C138 /* Personality QuizUITests.xctest */;
+			name = "Tech Social Media AppUITests";
+			productName = "Tech Social Media AppUITests";
+			productReference = 848DA12028EDC7B1009F38A3 /* Tech Social Media AppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		841CDB8E28EB843000F0C138 /* Project object */ = {
+		848DA0F828EDC7AF009F38A3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
-					841CDB9528EB843000F0C138 = {
+					848DA0FF28EDC7AF009F38A3 = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
-					841CDBAB28EB843100F0C138 = {
+					848DA11528EDC7B1009F38A3 = {
 						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = 841CDB9528EB843000F0C138;
+						TestTargetID = 848DA0FF28EDC7AF009F38A3;
 					};
-					841CDBB528EB843100F0C138 = {
+					848DA11F28EDC7B1009F38A3 = {
 						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = 841CDB9528EB843000F0C138;
+						TestTargetID = 848DA0FF28EDC7AF009F38A3;
 					};
 				};
 			};
-			buildConfigurationList = 841CDB9128EB843000F0C138 /* Build configuration list for PBXProject "Personality Quiz" */;
+			buildConfigurationList = 848DA0FB28EDC7AF009F38A3 /* Build configuration list for PBXProject "Tech Social Media App" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -223,37 +214,37 @@
 				en,
 				Base,
 			);
-			mainGroup = 841CDB8D28EB843000F0C138;
-			productRefGroup = 841CDB9728EB843000F0C138 /* Products */;
+			mainGroup = 848DA0F728EDC7AF009F38A3;
+			productRefGroup = 848DA10128EDC7AF009F38A3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				841CDB9528EB843000F0C138 /* Personality Quiz */,
-				841CDBAB28EB843100F0C138 /* Personality QuizTests */,
-				841CDBB528EB843100F0C138 /* Personality QuizUITests */,
+				848DA0FF28EDC7AF009F38A3 /* Tech Social Media App */,
+				848DA11528EDC7B1009F38A3 /* Tech Social Media AppTests */,
+				848DA11F28EDC7B1009F38A3 /* Tech Social Media AppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		841CDB9428EB843000F0C138 /* Resources */ = {
+		848DA0FE28EDC7AF009F38A3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				841CDBA628EB843100F0C138 /* LaunchScreen.storyboard in Resources */,
-				841CDBA328EB843100F0C138 /* Assets.xcassets in Resources */,
-				841CDBA128EB843000F0C138 /* Main.storyboard in Resources */,
+				848DA11028EDC7B1009F38A3 /* LaunchScreen.storyboard in Resources */,
+				848DA10D28EDC7B1009F38A3 /* Assets.xcassets in Resources */,
+				848DA10B28EDC7AF009F38A3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		841CDBAA28EB843100F0C138 /* Resources */ = {
+		848DA11428EDC7B1009F38A3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		841CDBB428EB843100F0C138 /* Resources */ = {
+		848DA11E28EDC7B1009F38A3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -263,64 +254,61 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		841CDB9228EB843000F0C138 /* Sources */ = {
+		848DA0FC28EDC7AF009F38A3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				841CDB9E28EB843000F0C138 /* IntroductionViewController.swift in Sources */,
-				848DA0F628ECDCAD009F38A3 /* QuestionsData.swift in Sources */,
-				841CDB9A28EB843000F0C138 /* AppDelegate.swift in Sources */,
-				841CDBCA28EBC72F00F0C138 /* QuestionViewController.swift in Sources */,
-				841CDBCC28EBC75B00F0C138 /* ResultsViewController.swift in Sources */,
-				841CDB9C28EB843000F0C138 /* SceneDelegate.swift in Sources */,
+				848DA10828EDC7AF009F38A3 /* ViewController.swift in Sources */,
+				848DA10428EDC7AF009F38A3 /* AppDelegate.swift in Sources */,
+				848DA10628EDC7AF009F38A3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		841CDBA828EB843100F0C138 /* Sources */ = {
+		848DA11228EDC7B1009F38A3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				841CDBB128EB843100F0C138 /* Personality_QuizTests.swift in Sources */,
+				848DA11B28EDC7B1009F38A3 /* Tech_Social_Media_AppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		841CDBB228EB843100F0C138 /* Sources */ = {
+		848DA11C28EDC7B1009F38A3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				841CDBBD28EB843100F0C138 /* Personality_QuizUITestsLaunchTests.swift in Sources */,
-				841CDBBB28EB843100F0C138 /* Personality_QuizUITests.swift in Sources */,
+				848DA12728EDC7B1009F38A3 /* Tech_Social_Media_AppUITestsLaunchTests.swift in Sources */,
+				848DA12528EDC7B1009F38A3 /* Tech_Social_Media_AppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		841CDBAE28EB843100F0C138 /* PBXTargetDependency */ = {
+		848DA11828EDC7B1009F38A3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 841CDB9528EB843000F0C138 /* Personality Quiz */;
-			targetProxy = 841CDBAD28EB843100F0C138 /* PBXContainerItemProxy */;
+			target = 848DA0FF28EDC7AF009F38A3 /* Tech Social Media App */;
+			targetProxy = 848DA11728EDC7B1009F38A3 /* PBXContainerItemProxy */;
 		};
-		841CDBB828EB843100F0C138 /* PBXTargetDependency */ = {
+		848DA12228EDC7B1009F38A3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 841CDB9528EB843000F0C138 /* Personality Quiz */;
-			targetProxy = 841CDBB728EB843100F0C138 /* PBXContainerItemProxy */;
+			target = 848DA0FF28EDC7AF009F38A3 /* Tech Social Media App */;
+			targetProxy = 848DA12128EDC7B1009F38A3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		841CDB9F28EB843000F0C138 /* Main.storyboard */ = {
+		848DA10928EDC7AF009F38A3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				841CDBA028EB843000F0C138 /* Base */,
+				848DA10A28EDC7AF009F38A3 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		841CDBA428EB843100F0C138 /* LaunchScreen.storyboard */ = {
+		848DA10E28EDC7B1009F38A3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				841CDBA528EB843100F0C138 /* Base */,
+				848DA10F28EDC7B1009F38A3 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -328,7 +316,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		841CDBBE28EB843100F0C138 /* Debug */ = {
+		848DA12828EDC7B1009F38A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -388,7 +376,7 @@
 			};
 			name = Debug;
 		};
-		841CDBBF28EB843100F0C138 /* Release */ = {
+		848DA12928EDC7B1009F38A3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -442,7 +430,7 @@
 			};
 			name = Release;
 		};
-		841CDBC128EB843100F0C138 /* Debug */ = {
+		848DA12B28EDC7B1009F38A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -451,7 +439,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7YA3SS5ST9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Personality Quiz/Info.plist";
+				INFOPLIST_FILE = "Tech Social Media App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -462,7 +450,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.amismith.Personality-Quiz";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amismith.Tech-Social-Media-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -470,7 +458,7 @@
 			};
 			name = Debug;
 		};
-		841CDBC228EB843100F0C138 /* Release */ = {
+		848DA12C28EDC7B1009F38A3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -479,7 +467,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7YA3SS5ST9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Personality Quiz/Info.plist";
+				INFOPLIST_FILE = "Tech Social Media App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -490,7 +478,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.amismith.Personality-Quiz";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amismith.Tech-Social-Media-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -498,7 +486,7 @@
 			};
 			name = Release;
 		};
-		841CDBC428EB843100F0C138 /* Debug */ = {
+		848DA12E28EDC7B1009F38A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -509,16 +497,16 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.amismith.Personality-QuizTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amismith.Tech-Social-Media-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Personality Quiz.app/Personality Quiz";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tech Social Media App.app/Tech Social Media App";
 			};
 			name = Debug;
 		};
-		841CDBC528EB843100F0C138 /* Release */ = {
+		848DA12F28EDC7B1009F38A3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -529,16 +517,16 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.amismith.Personality-QuizTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amismith.Tech-Social-Media-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Personality Quiz.app/Personality Quiz";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tech Social Media App.app/Tech Social Media App";
 			};
 			name = Release;
 		};
-		841CDBC728EB843100F0C138 /* Debug */ = {
+		848DA13128EDC7B1009F38A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -547,16 +535,16 @@
 				DEVELOPMENT_TEAM = 7YA3SS5ST9;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.amismith.Personality-QuizUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amismith.Tech-Social-Media-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Personality Quiz";
+				TEST_TARGET_NAME = "Tech Social Media App";
 			};
 			name = Debug;
 		};
-		841CDBC828EB843100F0C138 /* Release */ = {
+		848DA13228EDC7B1009F38A3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -565,55 +553,55 @@
 				DEVELOPMENT_TEAM = 7YA3SS5ST9;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.amismith.Personality-QuizUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amismith.Tech-Social-Media-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Personality Quiz";
+				TEST_TARGET_NAME = "Tech Social Media App";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		841CDB9128EB843000F0C138 /* Build configuration list for PBXProject "Personality Quiz" */ = {
+		848DA0FB28EDC7AF009F38A3 /* Build configuration list for PBXProject "Tech Social Media App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				841CDBBE28EB843100F0C138 /* Debug */,
-				841CDBBF28EB843100F0C138 /* Release */,
+				848DA12828EDC7B1009F38A3 /* Debug */,
+				848DA12928EDC7B1009F38A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		841CDBC028EB843100F0C138 /* Build configuration list for PBXNativeTarget "Personality Quiz" */ = {
+		848DA12A28EDC7B1009F38A3 /* Build configuration list for PBXNativeTarget "Tech Social Media App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				841CDBC128EB843100F0C138 /* Debug */,
-				841CDBC228EB843100F0C138 /* Release */,
+				848DA12B28EDC7B1009F38A3 /* Debug */,
+				848DA12C28EDC7B1009F38A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		841CDBC328EB843100F0C138 /* Build configuration list for PBXNativeTarget "Personality QuizTests" */ = {
+		848DA12D28EDC7B1009F38A3 /* Build configuration list for PBXNativeTarget "Tech Social Media AppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				841CDBC428EB843100F0C138 /* Debug */,
-				841CDBC528EB843100F0C138 /* Release */,
+				848DA12E28EDC7B1009F38A3 /* Debug */,
+				848DA12F28EDC7B1009F38A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		841CDBC628EB843100F0C138 /* Build configuration list for PBXNativeTarget "Personality QuizUITests" */ = {
+		848DA13028EDC7B1009F38A3 /* Build configuration list for PBXNativeTarget "Tech Social Media AppUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				841CDBC728EB843100F0C138 /* Debug */,
-				841CDBC828EB843100F0C138 /* Release */,
+				848DA13128EDC7B1009F38A3 /* Debug */,
+				848DA13228EDC7B1009F38A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 841CDB8E28EB843000F0C138 /* Project object */;
+	rootObject = 848DA0F828EDC7AF009F38A3 /* Project object */;
 }
