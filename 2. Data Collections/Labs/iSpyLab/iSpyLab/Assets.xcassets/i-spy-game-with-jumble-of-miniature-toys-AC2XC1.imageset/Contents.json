@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "i-spy-game-with-jumble-of-miniature-toys-AC2XC1.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
