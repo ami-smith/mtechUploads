@@ -15,19 +15,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D9d-AD-jbS">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D9d-AD-jbS">
                                 <rect key="frame" x="0.0" y="47" width="390" height="763"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="i-spy-game-with-jumble-of-miniature-toys-AC2XC1" translatesAutoresizingMaskIntoConstraints="NO" id="zUy-5d-DvJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="763"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i-spy-game-with-jumble-of-miniature-toys-AC2XC1" translatesAutoresizingMaskIntoConstraints="NO" id="zUy-5d-DvJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="838"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="zUy-5d-DvJ" firstAttribute="top" secondItem="VYp-jy-Ueb" secondAttribute="top" id="6uw-Kc-5Gx"/>
-                                    <constraint firstItem="zUy-5d-DvJ" firstAttribute="trailing" secondItem="VYp-jy-Ueb" secondAttribute="trailing" id="W2c-G5-N5y"/>
-                                    <constraint firstItem="zUy-5d-DvJ" firstAttribute="leading" secondItem="VYp-jy-Ueb" secondAttribute="leading" id="ZLI-Rv-LGH"/>
-                                    <constraint firstItem="zUy-5d-DvJ" firstAttribute="bottom" secondItem="VYp-jy-Ueb" secondAttribute="bottom" id="qjX-k4-tfw"/>
-                                </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="VYp-jy-Ueb"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="2o5-j3-BBZ"/>
                             </scrollView>
@@ -35,10 +30,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="D9d-AD-jbS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AiP-YU-zhl"/>
                             <constraint firstItem="D9d-AD-jbS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="B7D-h9-cgo"/>
-                            <constraint firstItem="D9d-AD-jbS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HhI-PR-bec"/>
                             <constraint firstItem="D9d-AD-jbS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VbD-bt-Mgb"/>
-                            <constraint firstItem="D9d-AD-jbS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="a5d-2J-MeG"/>
+                            <constraint firstItem="D9d-AD-jbS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Wec-27-b21"/>
                         </constraints>
                     </view>
                     <connections>

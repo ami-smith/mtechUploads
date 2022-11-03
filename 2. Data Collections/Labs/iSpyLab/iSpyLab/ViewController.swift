@@ -17,7 +17,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.delegate = self
-            // Do any additional setup after loading the view.
+            
         }
         
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
