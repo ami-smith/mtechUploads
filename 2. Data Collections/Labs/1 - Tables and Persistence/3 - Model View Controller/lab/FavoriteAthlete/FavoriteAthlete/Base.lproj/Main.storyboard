@@ -125,6 +125,7 @@
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveButtonPressed:" destination="Jdx-qb-Jda" eventType="touchUpInside" id="irE-6k-niA"/>
+                                    <segue destination="Oeg-t5-t9w" kind="unwind" identifier="unwindToAthleteTableViewController" unwindAction="unwindToAthleteTableViewController:" id="fL7-0E-7hb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -149,6 +150,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JRJ-p2-DTp" sceneMemberID="firstResponder"/>
+                <exit id="Oeg-t5-t9w" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1860" y="139"/>
         </scene>
