@@ -19,7 +19,7 @@
 		84ED1104291AB8B000DF3CC1 /* ScoreboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED1103291AB8B000DF3CC1 /* ScoreboardTableViewCell.swift */; };
 		84ED1106291AB93F00DF3CC1 /* ScoreboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED1105291AB93F00DF3CC1 /* ScoreboardTableViewController.swift */; };
 		84ED1108291ABB6700DF3CC1 /* AddPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED1107291ABB6700DF3CC1 /* AddPlayerViewController.swift */; };
-		84ED110C291AC6E300DF3CC1 /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED110B291AC6E300DF3CC1 /* Players.swift */; };
+		84ED110C291AC6E300DF3CC1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED110B291AC6E300DF3CC1 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +56,7 @@
 		84ED1103291AB8B000DF3CC1 /* ScoreboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardTableViewCell.swift; sourceTree = "<group>"; };
 		84ED1105291AB93F00DF3CC1 /* ScoreboardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardTableViewController.swift; sourceTree = "<group>"; };
 		84ED1107291ABB6700DF3CC1 /* AddPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerViewController.swift; sourceTree = "<group>"; };
-		84ED110B291AC6E300DF3CC1 /* Players.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
+		84ED110B291AC6E300DF3CC1 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +114,7 @@
 				84ED1107291ABB6700DF3CC1 /* AddPlayerViewController.swift */,
 				84ED1105291AB93F00DF3CC1 /* ScoreboardTableViewController.swift */,
 				84ED1103291AB8B000DF3CC1 /* ScoreboardTableViewCell.swift */,
-				84ED110B291AC6E300DF3CC1 /* Players.swift */,
+				84ED110B291AC6E300DF3CC1 /* Player.swift */,
 				84ED10DA291AA96000DF3CC1 /* Assets.xcassets */,
 				84ED10DC291AA96000DF3CC1 /* LaunchScreen.storyboard */,
 				84ED10DF291AA96000DF3CC1 /* Info.plist */,
@@ -273,7 +273,7 @@
 				84ED1104291AB8B000DF3CC1 /* ScoreboardTableViewCell.swift in Sources */,
 				84ED1108291ABB6700DF3CC1 /* AddPlayerViewController.swift in Sources */,
 				84ED1106291AB93F00DF3CC1 /* ScoreboardTableViewController.swift in Sources */,
-				84ED110C291AC6E300DF3CC1 /* Players.swift in Sources */,
+				84ED110C291AC6E300DF3CC1 /* Player.swift in Sources */,
 				84ED10D6291AA95E00DF3CC1 /* ViewController.swift in Sources */,
 				84ED10D2291AA95E00DF3CC1 /* AppDelegate.swift in Sources */,
 				84ED10D4291AA95E00DF3CC1 /* SceneDelegate.swift in Sources */,

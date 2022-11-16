@@ -41,7 +41,7 @@ class ToDoTableViewController: UITableViewController, ToDoCellDelegate {
         guard segue.identifier == "saveUnwind" else { return }
         let sourceViewController = segue.source as! ToDoDetailTableViewController
         
-        if let toDo = sourceViewController.toDo {
+        let toDo = sourceViewController.toDo {
             if let indexOfExistingToDo = toDos.firstIndex(of: toDo) {
                 toDos[indexOfExistingToDo] = toDo
                 tableView.reloadRows(at: [IndexPath(row: indexOfExistingToDo, section: 0)], with: .automatic)

@@ -7,25 +7,42 @@
 
 import UIKit
 
-class ScoreboardTableViewController:  UITableViewController, AddPlayerViewControllerDelegate {
+
+class ScoreboardTableViewController:  UITableViewController, AddPlayerViewControllerDelegate, ScoreBoardTableViewCellDelegate {
+  
+    
+    func playerWasUpdated(score: Int, row: Int) {
+        players[row].currentScore = Int(score)
+        players.sort()
+
+        tableView.reloadData()
+        
+    }
+    
+    
+    var player: Player?
+  
     
     func newPlayerData(player: String, score: Int) {
-        let newPlayer = Players(name: player, currentScore: score)
+        let newPlayer = Player(name: player, currentScore: score)
         players.append(newPlayer)
+        players.sort()
         tableView.reloadData()
     }
     
     
-    var players: [Players] = [
-    Players(name: "Ami", currentScore: 6),
-    Players(name: "Junne", currentScore: 4),
-    Players(name: "Nelson", currentScore: 7)
+    var players: [Player] = [
+    Player(name: "Ami", currentScore: 6),
+    Player(name: "Junne", currentScore: 4),
+    Player(name: "Nelson", currentScore: 7)
 
     
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        players.sort() { $1.currentScore < $0.currentScore }
         
         
         tableView.rowHeight = UITableView.automaticDimension
@@ -49,10 +66,13 @@ class ScoreboardTableViewController:  UITableViewController, AddPlayerViewContro
         let cell = tableView.dequeueReusableCell(withIdentifier: "ScoreboardCell", for: indexPath) as! ScoreboardTableViewCell
         let newPlayer = players[indexPath.row]
         
+        cell.row = indexPath.row
+        
         cell.update(with: newPlayer)
         cell.showsReorderControl = true
     
-
+        cell.delegate = self
+        
         return cell
     }
 
@@ -93,20 +113,20 @@ class ScoreboardTableViewController:  UITableViewController, AddPlayerViewContro
 //    }
 
 
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
+//    Override to support conditional rearranging of the table view.
 
+func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+    
+    
+    return true
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+}
