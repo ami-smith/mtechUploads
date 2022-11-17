@@ -58,39 +58,42 @@ class FurnitureDetailViewController: UIViewController, UIImagePickerControllerDe
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             let photoLibraryAction = UIAlertAction(title:"Photo Library", style: .default, handler: { (_) in
                 imagePicker.sourceType = .photoLibrary
-                self.present(imagePicker, animated: true, completion: nil) })
+                self.present(imagePicker, animated: true, completion: nil)
+                
+            })
             alertController.addAction(photoLibraryAction)
         }
+        
         present(alertController, animated: true, completion: nil)
         
-    
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
-        guard let image = info[.originalImage] as? UIImage else { return }
-        furniture?.imageData = image.jpegData(compressionQuality: 0.9)
-        
-        dismiss(animated: true)
-        self.updateView()
     }
-}
+        
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            
+            guard let image = info[.originalImage] as? UIImage else { return }
+            furniture?.imageData = image.jpegData(compressionQuality: 0.9)
+            
+            dismiss(animated: true) {
+            self.updateView()
+        }
+    }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
     
     
-
+    
     @IBAction func actionButtonTapped(_ sender: Any) {
         guard let furniture = furniture else {
             return
-        
-    }
+            
+        }
         var items: [Any] = ["\(furniture.name): \(furniture.description)"]
         if let image = photoImageView.image {
             items.append(image)
         }
         let activityController = UIActivityViewController(activityItems: items, applicationActivities: nil)
         present(activityController, animated: true, completion: nil)
-}
+    }
 }
