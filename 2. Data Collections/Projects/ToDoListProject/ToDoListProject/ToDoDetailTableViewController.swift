@@ -21,15 +21,7 @@ class ToDoDetailTableViewController: UITableViewController {
     let datePickerIndexPath = IndexPath(row: 1, section: 1)
     let notesIndexPath = IndexPath(row: 0, section: 2)
     
-    
-    
-    func updateSaveButtonState() {
-        let shouldEnableSaveButton = titleTextField.text?.isEmpty == false
-        saveButton.isEnabled = shouldEnableSaveButton
-    }
-    
-    
-
+    var toDo: ToDo?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,35 +32,57 @@ class ToDoDetailTableViewController: UITableViewController {
             isCompleteButton.isSelected = toDo.isComplete
             currentDueDate = toDo.dueDate
             notesTextView.text = toDo.notes
-        }else {
+        } else {
             currentDueDate = Date().addingTimeInterval(24*60*60)
         }
+        
         dueDateDatePicker.date = Date().addingTimeInterval(24*60*60)
         updateDueDateLabel(date: dueDateDatePicker.date)
         updateSaveButtonState()
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        guard segue.identifier == "saveUnwind" else { return }
+        
+        let title = titleTextField.text!
+        let isComplete = isCompleteButton.isSelected
+        let dueDate = dueDateDatePicker.date
+        let notes = notesTextView.text
+        
+        if toDo != nil {
+            toDo?.title = title
+            toDo?.isComplete = isComplete
+            toDo?.dueDate = dueDate
+            toDo?.notes = notes
+        } else {
+            toDo = ToDo(title: title, isComplete: isComplete, dueDate: dueDate, notes: notes)
+        }
+        
+    }
     func updateDueDateLabel(date: Date) {
         dueDateLabel.text = date.formatted(.dateTime.month(.defaultDigits).day().year(.twoDigits).hour().minute())
     }
     
-    
-    
-    
-    
-    
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
+    func updateSaveButtonState() {
+        let shouldEnableSaveButton = titleTextField.text?.isEmpty == false
+        saveButton.isEnabled = shouldEnableSaveButton
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+    
+    @IBAction func textEditingChanged(_ sender: UITextField) {
+        updateSaveButtonState()
     }
-
-    override func tableView(_ tableView: UITableView,
-       heightForRowAt indexPath: IndexPath) -> CGFloat {
+    @IBAction func returnPressed(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
+    @IBAction func isCompleteButtonTapped(_ sender: UIButton) {
+        isCompleteButton.isSelected.toggle()
+    }
+    @IBAction func datePickerChanged(_ sender: UIDatePicker) {
+        updateDueDateLabel(date: sender.date)
+    }
+    
+    override func tableView(_ tableView: UITableView,heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath {
         case datePickerIndexPath where isDatePickerHidden == true:
             return 216
@@ -78,6 +92,21 @@ class ToDoDetailTableViewController: UITableViewController {
             return UITableView.automaticDimension
         }
     }
+    
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath {
+        case datePickerIndexPath:
+            return 216
+        case notesIndexPath:
+            return 200
+        default:
+            return UITableView.automaticDimension
+        }
+    }
+    
+    
+    
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath == dateLabelIndexPath {
@@ -87,50 +116,4 @@ class ToDoDetailTableViewController: UITableViewController {
             tableView.endUpdates()
         }
     }
-    
-    
-    
-    
-    
-//   MARK: - Navigation
-
-    
-    @IBAction func textEditingChanged(_ sender: UITextField) {
-        
-        updateSaveButtonState()
-    }
-    
-    @IBAction func returnPressed(_ sender: UITextField) {
-        
-        isCompleteButton.isSelected.toggle()
-    }
-    
-    
-    @IBAction func isCompleteButtonTapped(_ sender: UIButton) {
-        isCompleteButton.isSelected.toggle()
-    }
-    
-    
-    @IBAction func datePickerChanged(_ sender: UIDatePicker) {
-    }
-    
-    @IBSegueAction func editToDo(_ coder: NSCoder, sender: Any?) -> ToDoDetailTableViewController? {
-        let detailController =  ToDoDetailTableViewController(coder: coder)
-        
-        guard let cell = sender as? UITableViewCell,
-              let indexPath = tableView.indexPath(for: cell) else {
-            return detailController
-        }
-        tableView.deselectRow(at: IndexPath, animated: true)
-        
-        detailController?.toDo = toDos[indexPath.row]
-        
-        return detailController
-        
-    }
-    
-    
-    
-    
-    
 }

@@ -152,7 +152,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JRJ-p2-DTp" sceneMemberID="firstResponder"/>
                 <exit id="Oeg-t5-t9w" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1860" y="139"/>
+            <point key="canvasLocation" x="1860" y="138.6255924170616"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
