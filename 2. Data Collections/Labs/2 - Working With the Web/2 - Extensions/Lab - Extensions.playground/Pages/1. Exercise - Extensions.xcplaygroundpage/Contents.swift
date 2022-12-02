@@ -27,11 +27,13 @@ struct Rectangle {
 }
     extension Rectangle {
         func halved() -> Rectangle {
-            
+            return Rectangle(length: length / 2, width: width / 2)
         }
-        return Rectangle
+        mutating func half() {
+            self = halved()
+        }
     }
-    Rectangle(length: 14, width: 6)
+    
     
 
 
@@ -40,8 +42,11 @@ struct Rectangle {
  
  Below, create a variable `Rectangle` called `myRectangle`, and set its length to 10 and its width to 5. Create a second instance, `mySmallerRectangle`, that's the result of calling `halved()` on `myRectangle`. Then update the values of `myRectangle` by calling `half()` on itself. Print each of the instances.
  */
+var myRectangle = Rectangle(length: 10, width: 5)
+var mySmallerRectangle = myRectangle.halved()
 
-
+print(myRectangle)
+print(mySmallerRectangle)
 /*:
 page 1 of 2  |  [Next: App Exercise - Workout Extensions](@next)
  */
