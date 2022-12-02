@@ -7,6 +7,10 @@
 
 import Foundation
 
+enum StoreItemError: Error, LocalizedError {
+    case itemsNotFound
+}
+
 class StoreItemController {
     func fetchItems(matching query: [String: String]) async
     throws -> [StoreItem] {
@@ -23,3 +27,5 @@ class StoreItemController {
         return searchResponse.results
     }
 }
+
+

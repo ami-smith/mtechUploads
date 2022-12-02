@@ -9,7 +9,8 @@ class StoreItemListTableViewController: UITableViewController {
     
     // add item controller property
     
-    var items = [String]()
+    var items = [StoreItem]()
+    var storeItemController = StoreItemController()
     var imageLoadTasks: [IndexPath: Task<Void, Never>] = [:]
     
     let queryOptions = ["movie", "music", "software", "ebook"]
@@ -28,18 +29,40 @@ class StoreItemListTableViewController: UITableViewController {
         let mediaType = queryOptions[filterSegmentedControl.selectedSegmentIndex]
         
         if !searchTerm.isEmpty {
-            
             // set up query dictionary
             
+            let query: [String: String] = [
+                "term": searchTerm,
+                "media": mediaType,
+                "limit": "10",
+                "lang": "en_us"
+            ]
             // use the item controller to fetch items
             // if successful, use the main queue to set self.items and reload the table view
             // otherwise, print an error to the console
+            
+            Task {
+                do {
+                self.items =  try await storeItemController.fetchItems(matching: query)
+                self.tableView.reloadData()
+                } catch {
+                    print(error)
+                }
+                
+            }
         }
     }
+    
+    
+    
+    
     
     func configure(cell: ItemCell, forItemAt indexPath: IndexPath) {
         
         let item = items[indexPath.row]
+        cell.name = item.songTitle
+        cell.artist = item.artistName
+        cell.artworkImage = nil
         
         // set cell.name to the item's name
         

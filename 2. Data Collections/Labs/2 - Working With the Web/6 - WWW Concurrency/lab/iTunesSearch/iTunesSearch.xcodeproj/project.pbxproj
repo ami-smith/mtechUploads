@@ -66,12 +66,12 @@
 				18A6051C23CF9802002037CA /* AppDelegate.swift */,
 				18A6053223CF9ADA002037CA /* ItemCell.swift */,
 				18A6051E23CF9802002037CA /* SceneDelegate.swift */,
+				84E91FDB293A560100371CD3 /* StoreItem.swift */,
+				84E91FDD293A561000371CD3 /* StoreItemController.swift */,
 				18A6053023CF9829002037CA /* StoreItemListTableViewController.swift */,
 				18A6052523CF9803002037CA /* Assets.xcassets */,
 				18A6052723CF9803002037CA /* LaunchScreen.storyboard */,
 				18A6052223CF9802002037CA /* Main.storyboard */,
-				84E91FDB293A560100371CD3 /* StoreItem.swift */,
-				84E91FDD293A561000371CD3 /* StoreItemController.swift */,
 			);
 			path = iTunesSearch;
 			sourceTree = "<group>";
