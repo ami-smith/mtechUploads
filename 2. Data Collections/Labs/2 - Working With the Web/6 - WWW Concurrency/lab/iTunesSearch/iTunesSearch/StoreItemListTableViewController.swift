@@ -31,7 +31,7 @@ class StoreItemListTableViewController: UITableViewController {
         if !searchTerm.isEmpty {
             // set up query dictionary
             
-            let query: [String: String] = [
+            var query: [String: String] = [
                 "term": searchTerm,
                 "media": mediaType,
                 "limit": "10",
@@ -73,8 +73,19 @@ class StoreItemListTableViewController: UITableViewController {
         // initialize a network task to fetch the item's artwork keeping track of the task
         // in imageLoadTasks so they can be cancelled if the cell will not be shown after
         // the task completes.
-        //
-        // if successful, set the cell.artworkImage using the returned image
+        imageLoadTasks[indexPath] = Task {
+            do {
+                let image = try await storeItemController.fetchImage(from: item.url)
+                
+                // update the cell's artworkImage
+                cell.artworkImage = image
+            } catch {
+                print("Error fetching image: \(error)")
+            }
+            
+            // if successful, set the cell.artworkImage using the returned image
+            imageLoadTasks[indexPath] = nil
+        }
     }
     
     @IBAction func filterOptionUpdated(_ sender: UISegmentedControl) {
