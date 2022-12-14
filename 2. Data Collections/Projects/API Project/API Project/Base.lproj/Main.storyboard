@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cF4-MC-nGw">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dog-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DogItemViewController" customModule="API_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E6r-3e-Qif" customClass="DogImageViewController">
+                                <rect key="frame" x="20" y="127" width="350" height="330"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="330" id="McJ-2b-reR"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QV8-Bg-hLu">
+                                <rect key="frame" x="123" y="507" width="144" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="New Good Boi"/>
+                                <connections>
+                                    <action selector="newDogButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O7d-NQ-6u0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E6r-3e-Qif" secondAttribute="trailing" constant="20" id="2AM-Fg-Mg3"/>
+                            <constraint firstItem="QV8-Bg-hLu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="123" id="LB0-Qi-984"/>
+                            <constraint firstItem="E6r-3e-Qif" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O1c-Eg-oYb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QV8-Bg-hLu" secondAttribute="trailing" constant="123" id="STa-HO-xUb"/>
+                            <constraint firstItem="E6r-3e-Qif" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="U54-sH-bKH"/>
+                            <constraint firstItem="QV8-Bg-hLu" firstAttribute="top" secondItem="E6r-3e-Qif" secondAttribute="bottom" constant="50" id="cAW-d7-Db3"/>
+                            <constraint firstItem="E6r-3e-Qif" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="lh6-lv-eTx"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dog" image="pawprint.fill" catalog="system" id="MQx-X7-hot"/>
+                    <navigationItem key="navigationItem" id="5nc-lH-bWL"/>
+                    <connections>
+                        <outlet property="dogImage" destination="E6r-3e-Qif" id="7Y4-9s-uQ4"/>
+                        <outlet property="newDogButton" destination="QV8-Bg-hLu" id="ygh-s9-jnH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="3.5545023696682461"/>
+        </scene>
+        <!--Rep-->
+        <scene sceneID="Qhy-DO-4dS">
+            <objects>
+                <viewController id="PgR-zu-PAv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ygY-OC-Y8F">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="w0a-bE-d6R"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Rep" image="star.fill" catalog="system" id="hSH-Qf-5QH"/>
+                    <navigationItem key="navigationItem" id="KHI-oU-zJL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IsU-1S-aOb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="704"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="frO-Sh-47K">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="cF4-MC-nGw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zEx-Pi-rWu">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="fkR-P3-5gO"/>
+                        <segue destination="PgR-zu-PAv" kind="relationship" relationship="viewControllers" id="WkK-1s-Hbl"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n1I-6Z-ZiA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46" y="357"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pawprint.fill" catalog="system" width="128" height="112"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
