@@ -6,6 +6,8 @@
 //
 
 import UIKit
+
+
 @MainActor
 
 class MenuItemDetailViewController: UIViewController {
@@ -38,25 +40,33 @@ class MenuItemDetailViewController: UIViewController {
         priceLabel.text = menuItem.price.formatted(.currency(code: "usd"))
         detailTextLabel.text = menuItem.detailText
         
-        // Do any additional setup after loading the view.
+        Task.init {
+            if let image = try? await
+                MenuController.shared.fetchImage(from: menuItem.imageURL) {
+                imageView.image = image
+            }
+        }
     }
 
     
-    @IBSegueAction func showMenuItem(_ coder: NSCoder, sender: Any?) -> MenuItemDetailViewController? {
-        
-        guard let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) else {
-            return nil
-        }
-        
-        let menuItem = menuItems[indexPath.row]
-        return MenuItemDetailViewController(coder: coder, menuItem: menuItem)
-    }
+   
     
     @IBAction func addToOrderButtonTapped(_ sender: Any) {
+        UIView.animate(withDuration: 0.5, delay: 0,
+               usingSpringWithDamping: 0.7, initialSpringVelocity: 0.1,
+               options: [], animations: {
+                self.addToOrderButton.transform =
+                   CGAffineTransform(scaleX: 2.0, y: 2.0)
+                self.addToOrderButton.transform =
+                   CGAffineTransform(scaleX: 1.0, y: 1.0)}, completion: nil)
+        
+            MenuController.shared.order.menuItems.append(menuItem)
+        }
+        
     }
     
     
     
     
-}
+
 
