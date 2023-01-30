@@ -8,8 +8,21 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
     
+    let remindActionID: String = " RemindAction"
+    let markAsPaidActionID: String = "Paid Action"
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let remindAction = UNNotificationAction(identifier: remindActionID, title: "Remind Me Later", options: [.authenticationRequired])
+        
+        let markAsPaidAction = UNNotificationAction(identifier: markAsPaidActionID, title: "Payment Accepted", options: [.authenticationRequired])
+        
+        var category = UNNotificationCategory(identifier: Bill.notificationCategoryID, actions: [remindAction, markAsPaidAction], intentIdentifiers: [], options: [])
+        
+        UNUserNotificationCenter.current().setNotificationCategories([category])
+        
+        UNUserNotificationCenter.current().delegate = self
+        
         
         return true
     }
