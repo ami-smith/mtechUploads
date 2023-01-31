@@ -10,7 +10,7 @@ struct Bill: Codable {
     var payee: String?
     var remindDate: Date?
     var notificationID: String?
-    static var notificationCategoryID: String = "Reminder Notification"
+    
 
     
     init(id: UUID = UUID()) {
