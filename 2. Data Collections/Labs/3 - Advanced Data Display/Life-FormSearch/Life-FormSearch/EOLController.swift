@@ -20,5 +20,18 @@ extension Data {
     }
 }
 class EOLController {
+    static let shared = EOLController()
     
+    func sendRequest<Request: APIRequest>(_ request: Request) async throws -> Request.Response {
+        let (data, response) = try await URLSession.shared.data(for: request.urlRequest)
+
+        guard let httpResponse = response as? HTTPURLResponse,
+              httpResponse.statusCode == 200 else {
+            throw APIRequestError.itemNotFound
+        }
+        
+        let decodedResponse = try request.decodeResponse(data: data)
+        return(decodedResponse)
+    }
 }
+
