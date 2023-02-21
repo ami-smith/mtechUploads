@@ -9,17 +9,15 @@ import UIKit
 
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, PostTableViewCellDelegate {
     func postWasEdited(cell: UITableViewCell) {
-        
-        performSegue(withIdentifier: "editSegue", sender: cell)
-//        Task {
-//            do {
-//                let indexPath = postTableView.indexPath(for: cell)
-//                let post = posts[indexPath!.row]
-//                try await PostController.fetchItemsDeletePost(userSecret: User.current!.secret, postid: post.postid!)
-//            } catch {
-//                print(error)
-//            }
-//        }
+        Task {
+            do {
+                let indexPath = postTableView.indexPath(for: cell)
+                let post = posts[indexPath!.row]
+                try await PostController.fetchItemsDeletePost(userSecret: User.current!.secret, postid: post.postid!)
+            } catch {
+                print(error)
+            }
+        }
     }
     
     func postWasDeleted(cell: UITableViewCell) {
@@ -39,7 +37,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             do {
                 let indexPath = postTableView.indexPath(for: cell)
                 let post = posts[indexPath!.row]
-                try await PostController.fetchItemsEditPost(postid: post.postid!, title: title!, body: post.body!)
+                try await PostController.fetchItemsEditPost(userSecret: User.current!.secret, postid: post.postid!, title: title!, body: post.body!)
             } catch {
                 print(error)
             }
@@ -65,7 +63,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         
         
-        grabPosts()
+        self.grabPosts()
         
         self.postTableView.delegate = self
         self.postTableView.dataSource = self
@@ -106,6 +104,11 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     
+    
+    @IBAction func createPostButtonPressed(_ sender: Any) {
+        profileInfo()
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -118,23 +121,23 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! PostTableViewCell
-        
-        
-        let singlePost = posts[indexPath.row]
-        
-        cell.usernameLabel.text = singlePost.authorUserName
-        cell.titleLabel.text = singlePost.title
-        cell.bodyLabel.text = singlePost.body
-        cell.dateCreatedLabel.text = singlePost.createdDate
-        cell.numOfCommentsLabel.titleLabel?.text = String(singlePost.numComments ?? 0)
-        cell.likesLabel.titleLabel?.text = String(singlePost.likes ?? 0)
-        
-        cell.delegate = self
-        
-        return cell
-    }
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! PostTableViewCell
+            
+            
+            let singlePost = posts[indexPath.row]
+            
+            cell.usernameLabel.text = singlePost.authorUserName
+            cell.titleLabel.text = singlePost.title
+            cell.bodyLabel.text = singlePost.body
+            cell.dateCreatedLabel.text = singlePost.createdDate
+            cell.numOfCommentsLabel.titleLabel?.text = String(singlePost.numComments ?? 0)
+            cell.likesLabel.titleLabel?.text = String(singlePost.likes ?? 0)
+            
+            cell.delegate = self
+            
+            return cell
+        }
     
     func grabPosts() {
         Task {
@@ -162,17 +165,17 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //        in this function, we need to clarify that we are editing, and we also need to pass in the title, body, and postID
-        
-        guard segue.identifier == "editSegue", let cell = sender as? UITableViewCell, let indexPath = postTableView.indexPath(for: cell) else { return }
-        
-        var getPostToEdit = posts[indexPath.row]
-        let segueDestination = segue.destination as! UINavigationController
-        let createPostController = segueDestination.topViewController as! CreatePostTableViewController
-        createPostController.post = getPostToEdit
-    }
-        
+//    override var isEditing: Bool
+//    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+////        in this function, we need to clarify that we are editing, and we also need to pass in the title, body, and postID
+//        
+//        if isEditing == true {
+//            let
+//        }
+//        
+//    }
+    
     func editPostFunction(post: Post, title: String, body: String) {
         Task {
             do {
@@ -183,7 +186,9 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             }
         }
     }
-        
+    
+    
+    
     @IBAction func unwindToProfile(_ unwindSegue: UIStoryboardSegue) {
         
         guard let sourceViewController = unwindSegue.source as? CreatePostTableViewController else { return }
@@ -202,3 +207,4 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
 }
+

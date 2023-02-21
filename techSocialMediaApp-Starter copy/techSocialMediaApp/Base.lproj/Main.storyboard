@@ -399,6 +399,7 @@
                                                                     <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system" title="Edit"/>
                                                                     <connections>
                                                                         <action selector="editButtonTapped:" destination="caU-aG-NMK" eventType="touchUpInside" id="HAH-Mv-XTk"/>
+                                                                        <segue destination="cOx-ME-k13" kind="presentation" identifier="editSegue" id="lrh-4Z-ESW"/>
                                                                     </connections>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBG-6H-Nak">
@@ -517,7 +518,6 @@
                         <outlet property="techInterestsLabel" destination="h2M-DP-Add" id="qdp-JI-D1a"/>
                         <outlet property="userNameLabel" destination="wc7-Wk-cFF" id="umg-LM-cMf"/>
                         <segue destination="0Xb-r6-5aS" kind="show" id="Lja-Lx-tG8"/>
-                        <segue destination="cOx-ME-k13" kind="show" identifier="editSegue" id="4kt-CK-VDz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bdM-sZ-2qt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -567,7 +567,7 @@
             <objects>
                 <tableViewController id="jGJ-18-T2k" customClass="CreatePostTableViewController" customModule="techSocialMediaApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="5st-0A-02X">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="22r-tX-QcW">
@@ -577,7 +577,7 @@
                                 <navigationItem title="Create Post" id="cl0-Ib-cvY" userLabel="Create Post">
                                     <barButtonItem key="rightBarButtonItem" style="plain" id="BHp-Zr-fqu">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="9lD-9e-wf0">
-                                            <rect key="frame" x="288" y="4.6666666666666679" width="86" height="35"/>
+                                            <rect key="frame" x="288" y="10.666666666666664" width="86" height="35"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="Save"/>
@@ -660,9 +660,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cOx-ME-k13" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="M8G-nu-Qrv"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gQe-I8-e1Y">
-                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -676,7 +675,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="4kt-CK-VDz"/>
+        <segue reference="lrh-4Z-ESW"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="8401D5DF-4CB3-40BA-B14D-4CFCC8E32842_1_105_c" width="1086" height="724"/>

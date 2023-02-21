@@ -9,7 +9,7 @@ import Foundation
 
 class PostController {
     
-    //    MARK: GET USER POSTS
+//    MARK: GET USER POSTS
     enum GetPostItemError: Error, LocalizedError {
         case itemsNotFound
     }
@@ -34,7 +34,7 @@ class PostController {
         return posts
     }
     
-    //    MARK: DELETE
+//    MARK: DELETE
     
     enum DeletePostItemError: Error, LocalizedError {
         case itemsNotFound
@@ -60,7 +60,7 @@ class PostController {
         }
     }
     
-    //    MARK: EDIT
+//    MARK: EDIT
     
     enum EditPostItemError: Error, LocalizedError {
         case itemsNotFound
@@ -73,10 +73,9 @@ class PostController {
         
         // Put the credentials in JSON format
         let postDictionary: [String: Any] = ["userSecret": User.current!.secret.uuidString, "post": [
-            "postid": postid,
             "title": title,
             "body": body]
-        ]
+            ]
         
         // Add json data to the body of the request. Also clarify that this is a POST request
         request.httpBody = try JSONSerialization.data(withJSONObject: postDictionary, options: .prettyPrinted)
@@ -90,71 +89,73 @@ class PostController {
             throw CreatePostItemError.itemsNotFound
         }
         
-        //        let decoder = JSONDecoder()
-        //        let posts = try decoder.decode([Post].self, from: data) //don't need to decode
-        //        return posts //not returning post
-        //    }
-        
-    }
-    //    MARK: Create
+//        let decoder = JSONDecoder()
+//        let posts = try decoder.decode([Post].self, from: data) //don't need to decode
+//        return posts //not returning post
+//    }
+ 
+//    }
+//    MARK: Create
     
     enum CreatePostItemError: Error, LocalizedError {
         case itemsNotFound
     }
     
-    static func createPost(title: String, body: String) async throws {
-        // Initialize our session and request
-        let session = URLSession.shared
-        var request = URLRequest(url: URL(string: "\(API.url)/createPost")!)
-        
-        // Put the credentials in JSON format
-        let credentials: [String: Any] = ["userSecret": User.current!.secret.uuidString, "post": [
-            "title": title,
-            "body": body]
-        ]
-        
-        // Add json data to the body of the request. Also clarify that this is a POST request
-        
-        request.httpBody = try JSONSerialization.data(withJSONObject: credentials, options: .prettyPrinted)
-        request.httpMethod = "POST"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        
-        let (data, response) = try await session.data(for: request)
-        guard let httpResponse = response as? HTTPURLResponse,
-              httpResponse.statusCode == 200 else {
-            throw CreatePostItemError.itemsNotFound
+        static func createPost(title: String, body: String) async throws -> [Post] {
+            // Initialize our session and request
+            let session = URLSession.shared
+            var request = URLRequest(url: URL(string: "\(API.url)/createPost")!)
+            
+            // Put the credentials in JSON format
+            let credentials: [String: Any] = ["userSecret": User.current!.secret.uuidString, "post": [
+                        "title": title,
+                        "body": body]
+                        ]
+            
+            // Add json data to the body of the request. Also clarify that this is a POST request
+            
+            request.httpBody = try JSONSerialization.data(withJSONObject: credentials, options: .prettyPrinted)
+            request.httpMethod = "POST"
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            
+            
+            let (data, response) = try await session.data(for: request)
+            guard let httpResponse = response as? HTTPURLResponse,
+                  httpResponse.statusCode == 200 else {
+                throw CreatePostItemError.itemsNotFound
+            }
+            
+            let decoder = JSONDecoder()
+            let posts = try decoder.decode([Post].self, from: data)
+            return posts
         }
-       
-    }
-    
-    //    MARK: GET PERSONAL POSTS
-    
-    enum GetMyPostItemError: Error, LocalizedError {
-        case itemsNotFound
-    }
-    
-    static func fetchItemsGetMyPost() async throws -> [Post] {
-        var urlComponents = URLComponents(string: "https://tech-social-media-app.fly.dev/userPosts")!
         
-        //qsp are JSON body is JSON data
-        let queryParams = [
-            "userSecret": User.current!.secret.uuidString,
-            "userUUID": User.current!.userUUID?.uuidString,
-            "pageNumber": "0"
-        ]
+//    MARK: GET PERSONAL POSTS
+    
+        enum GetMyPostItemError: Error, LocalizedError {
+            case itemsNotFound
+        }
         
+        static func fetchItemsGetMyPost() async throws -> [Post] {
+            var urlComponents = URLComponents(string: "https://tech-social-media-app.fly.dev/userPosts")!
+
+            //qsp are JSON body is JSON data
+            let queryParams = [
+                "userSecret": User.current!.secret.uuidString,
+                "userUUID": User.current!.userUUID?.uuidString,
+                "pageNumber": "0"
+            ]
+            
         urlComponents.queryItems = queryParams.map { URLQueryItem(name: $0.key, value: $0.value) }
-        
+            
         let (data, response) = try await URLSession.shared.data(from: urlComponents.url!)
-        
+            
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
             throw GetMyPostItemError.itemsNotFound
         }
-        
+
         let decoder = JSONDecoder()
         let posts = try decoder.decode([Post].self, from: data)
         return posts
     }
-}
-
+    }
