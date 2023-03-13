@@ -36,9 +36,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         randomUserLabel.text = randomItem?.user
         
-       
-      //need to take a random element from this array and display it in the label
-        
     }
     
     func storeTextFieldNames() {
